@@ -1,9 +1,16 @@
+"use client"
+
 import React, { useState } from 'react'
 import { MdNotifications } from "react-icons/md"; 
 
+
 const Cato = () => {
 
-  const [s1,s2]=useState<string>('')
+  const [s1,s2]=useState<string>('Search')
+
+  function hander(){
+    s2("")
+  }
  
   
   return (
@@ -15,16 +22,17 @@ const Cato = () => {
                 <option>Siem Reap </option>
             </select>  
             <label >This job</label>
-            <span className='absolute right-7
+            <span  className='absolute right-7
              mt-5 w-10 h-10 text-3xl 
               bg-red-500 rounded-full 
               flex justify-center
               items-center
               
               '><MdNotifications /></span>
+              
         </div>
         <div>
-            <input className='p-2 mb-3 rounded-2xl'/>
+            <input onClick={hander} className='p-2 mb-3 rounded-2xl text-red-500' value={s1}/>
         </div>
       
     </div>
