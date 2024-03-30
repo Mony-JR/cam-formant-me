@@ -8,6 +8,8 @@ import { FaClipboardCheck } from "react-icons/fa";
 
 
 const Menu = () => {
+
+ 
   return (
     <div className='flex sm:flex-col justify-between 
     items-center text-3xl 

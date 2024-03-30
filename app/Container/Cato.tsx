@@ -1,7 +1,11 @@
-import React from 'react'
-import { MdNotifications } from "react-icons/md";
+import React, { useState } from 'react'
+import { MdNotifications } from "react-icons/md"; 
 
 const Cato = () => {
+
+  const [s1,s2]=useState<string>('')
+ 
+  
   return (
     <div className='flex justify-center mt-2'>
     <div className='Cato w-11/12 h-40 rounded-2xl flex-col justify-between flex  items-center'>
@@ -12,7 +16,7 @@ const Cato = () => {
             </select>  
             <label >This job</label>
             <span className='absolute right-7
-             mt-5 w-20 h-20 text-3xl text
+             mt-5 w-10 h-10 text-3xl 
               bg-red-500 rounded-full 
               flex justify-center
               items-center
