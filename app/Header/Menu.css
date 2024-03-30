@@ -1,8 +1,17 @@
 .menu{
-    box-shadow: 0 0 20px white;
-    background-color: white;
+    box-shadow: 0 0 20px rgb(9, 9, 9);
+    background-color: rgb(42, 42, 42);
 }
 
 .Cato{
     background-image: linear-gradient(to right, #FF5858, #F09819);
 }
+
+.input{
+    position: relative;
+}
+.btn-se{
+    position: absolute;
+
+}
+

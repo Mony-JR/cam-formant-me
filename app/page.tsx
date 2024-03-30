@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Cato from './Container/Cato'
+import Cato from './Container/page'
 
 const page = () => {
 
