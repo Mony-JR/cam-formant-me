@@ -4,12 +4,13 @@ import React, { useState } from 'react'
 import { MdNotifications } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { TbMenuDeep } from "react-icons/tb";
+import JobMain from './JobMain';
 
 
 const Cato = () => {
 
   return (
-    <div className='flex justify-center mt-2'>
+    <div className='flex flex-col items-center justify-center gap-10 mt-2'>
       <div className='Cato w-11/12 h-40 rounded-2xl flex-col justify-between flex  items-center'>
         <div className='flex justify-between w-full h-full items-center'>
           <div className="location flex flex-col justify-between w-full h-full items-start">
@@ -48,6 +49,8 @@ const Cato = () => {
         </div>
 
       </div>
+
+      <JobMain/>
     </div>
   )
 }

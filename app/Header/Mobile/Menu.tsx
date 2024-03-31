@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import "../Menu.css"
 import { FaFile } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
@@ -10,7 +11,7 @@ import Link from 'next/link';
 
 
 const Menu = () => {
-
+  
  
   return (
     <div className='flex sm:flex-col justify-between 
@@ -20,7 +21,7 @@ const Menu = () => {
     pt-2 pb-2 menu '
     
     >
-    <Link href={'./Container'}>
+    <Link href={'/Remume'}>
       <span className='text-white flex justify-center flex-col items-center'><GoHomeFill />
       <label className='text-xl'>Home</label>
        </span></Link>
