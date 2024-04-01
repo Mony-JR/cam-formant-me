@@ -31,7 +31,7 @@ const Cato = () => {
 
         </div>
         <div className='flex gap-3 justify-start items-center w-full h-full'>
-          <input type='text' className='p-2 ml-9 
+          <input placeholder='hello' type='text' className='p-2 ml-9 placeholder:text-red-500
           rounded-2xl text-black
           input relative w-9/12 outline-none pl-14'
           />

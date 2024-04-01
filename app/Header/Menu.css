@@ -14,4 +14,6 @@
     position: absolute;
 
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
