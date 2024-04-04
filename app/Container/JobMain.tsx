@@ -2,6 +2,8 @@ import React from 'react'
 import { CiHeart } from "react-icons/ci";
 import { FaBusinessTime } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { GrFormNextLink } from "react-icons/gr";
+
 
 const JobMain = () => {
     return (
@@ -178,6 +180,12 @@ const JobMain = () => {
                 <span className='pl-1 pr-2 bg-orange-500 rounded-full '></span>
                 <span className='pl-1 pr-2 bg-orange-500 rounded-full '></span>
             </div>
+
+            <button className='p-3 text-white text-xl bg-orange-500 w-[90%] flex justify-center items-center gap-2
+             rounded-3xl '>
+                Find Your Matching 
+                <span className='text-4xl text-white'><GrFormNextLink /></span>
+                </button>
 
         </div>
     )

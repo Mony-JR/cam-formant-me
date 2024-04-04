@@ -18,7 +18,7 @@ const Menu = () => {
     items-center text-3xl 
     fixed h-20 w-full 
     bottom-0 pl-5 pr-5 
-    pt-2 pb-2 menu '
+    pt-2 pb-2 menu z-50 '
     
     >
     <Link href={'/Remume'}>
