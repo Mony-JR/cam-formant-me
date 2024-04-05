@@ -5,6 +5,7 @@ import { IoSearch } from "react-icons/io5";
 import { TbMenuDeep } from "react-icons/tb";
 import JobMain from './JobMain';
 import Popup from './Popup';
+import Link from 'next/link';
 
 const Cato:React.FC = () => {
   const [pop1, setPop] = useState(true);
@@ -36,16 +37,17 @@ const Cato:React.FC = () => {
         gap-3
          justify-start items-center 
         w-full h-full'>
-          <input placeholder='hello' type='text' className='p-4 ml-4
+        
+        <Link className='w-full' href={"/Search"}> <input placeholder='hello' type='text' className='p-4 ml-4
            placeholder:text-gray-400
             rounded-2xl text-black input r
-           elative w-11/12 outline-none pl-20' />
+           elative w-11/12 outline-none pl-20' /> </Link>
           <span onClick={() => setPop(!pop1)} className='text-xl p-2 
           absolute right-10'><TbMenuDeep /></span>
           <button  className='text-xl 
           flex items-center justify-center
            left-10 btn-se p-4 Cato 
-           rounded-full text-white '><IoSearch /></button>
+           rounded-full text-white pointer-events-none '><IoSearch /></button>
         </div>
         <Popup jj={setPop} up={pop1} />
       </div>

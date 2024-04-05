@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 
 interface PopupProps{
-    jj:(value :boolean)=> void
+    jj:(value :boolean) => void
     up:boolean
 }
 
