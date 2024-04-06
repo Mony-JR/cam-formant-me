@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Popup from '../Container/Popup';
 
 
-const page:React.FC = () => {
+const Searching = () => {
 
   const [pop1, setPop] = useState<boolean>(true);
 
@@ -25,7 +25,7 @@ const page:React.FC = () => {
            placeholder:text-gray-400
             rounded-2xl text-black input r
            elative w-11/12 outline-none pl-20 shadow-md' />
-           
+
         <span onClick={() => setPop(!pop1)} className='text-xl p-2 
           absolute right-10'><TbMenuDeep /></span>
 
@@ -40,4 +40,4 @@ const page:React.FC = () => {
   )
 }
 
-export default page
+export default Searching
