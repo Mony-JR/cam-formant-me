@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 
 
-const Menu = () => {
+const Menu:React.FC = () => {
   
  
   return (

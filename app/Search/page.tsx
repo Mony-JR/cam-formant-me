@@ -7,9 +7,9 @@ import Link from 'next/link';
 import Popup from '../Container/Popup';
 
 
-const page = () => {
+const page:React.FC = () => {
 
-  const [pop1, setPop] = useState(true);
+  const [pop1, setPop] = useState<boolean>(true);
 
   return (
     <div className='flex justify-center items-center h-[100px]'>

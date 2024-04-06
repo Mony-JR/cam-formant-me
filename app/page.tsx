@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
 import Cato from './Container/page'
 
-const page = () => {
+const page:React.FC = () => {
 
   return (
     <div>

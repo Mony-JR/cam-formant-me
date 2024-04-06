@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { GrFormNextLink } from "react-icons/gr";
 
 
-const JobMain = () => {
+const JobMain:React.FC = () => {
     return (
         <div className='w-full flex flex-col justify-center items-center gap-5 '>
             <div className='flex justify-between w-full pl-4 pr-4'>
