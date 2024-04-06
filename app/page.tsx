@@ -1,6 +1,6 @@
 import Cato from './Container/page'
 
-const page:React.FC = () => {
+const page= () => {
 
   return (
     <div>

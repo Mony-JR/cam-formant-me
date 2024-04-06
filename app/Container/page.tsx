@@ -43,7 +43,7 @@ const Cato:React.FC = () => {
            placeholder:text-gray-400
             rounded-2xl text-black input r
            elative w-11/12 outline-none pl-20' /> </Link>
-          <span onClick={() => setPop(!pop1)} className='text-xl p-2 
+          <span role='button' onClick={() => setPop(!pop1)} className='text-xl p-2 
           absolute right-10'><TbMenuDeep /></span>
           <button  className='text-xl 
           flex items-center justify-center

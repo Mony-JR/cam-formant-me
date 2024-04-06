@@ -13,10 +13,10 @@ const JobMain:React.FC = () => {
                 <span className='text-orange-400'>Searching more</span>
             </div>
             <main className='flex flex-row 
-            gap-10 pl-7 pr-5 justify-start 
+            gap-10 ip14:pl-7 ipse:pl-3 pr-5 justify-start 
             w-[100%] h-[300px] overflow-y-auto scroll-main '>
-                <section className='w-[370px]  flex justify-between flex-col items-center'>
-                    <div className='w-[400px] h-[250px] 
+                <section className='w-[400px] flex justify-between flex-col items-center'>
+                    <div className=' ipse:w-[350px] ip14:w-[400px] h-[250px] 
             flex justify-between flex-col items-center
              bg-white drop-shadow-lg
              rounded-2xl pt-3 '>
@@ -122,7 +122,7 @@ const JobMain:React.FC = () => {
                 </section>
 
                 <section className='w-full flex justify-between flex-col items-center'>
-                    <div className='w-[400px] h-[250px] 
+                    <div className=' w-[400px] h-[250px] 
             flex justify-between flex-col items-center
              bg-white drop-shadow-lg
              rounded-2xl pt-3 '>
