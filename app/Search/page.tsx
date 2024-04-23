@@ -43,7 +43,7 @@ const Searching = () => {
 
       <Popup jj={setPop} up={pop1} />
     </div>
-    <Search/>
+    <Search S={sets1} S1={s1}/>
 
     </>
   )
