@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -9,20 +9,16 @@ const config: Config = {
   theme: {
     screens: {
       'ipse': '375px',
-      // => @media (min-width: 640px) { ... }
       'ip14':'430px',
-
       'laptop': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
       'desktop': '1280px',
-      // => @media (min-width: 1280px) { ... }
     },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+          'backg':"linear-gradient(to right, #FF5858, #F09819)",
       },
     },
   },

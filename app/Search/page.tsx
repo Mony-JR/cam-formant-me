@@ -15,7 +15,6 @@ const Searching = () => {
 
   return (
     <>
-    <h1>{s1}</h1>
     <div className='flex justify-center items-center h-[100px]'>
       <div>
         <Link href={"/"}><span className='text-3xl'><IoMdArrowBack /></span></Link>

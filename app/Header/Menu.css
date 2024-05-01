@@ -24,4 +24,14 @@
 .box-box{
     width: 400px;
 }
+.h{
+    height: 0;
+}
+.h1{
+    height: 100%;
+    background-color: #FF5858;
+}
 
+*{
+    transition: all .3s ease-in-out;
+}

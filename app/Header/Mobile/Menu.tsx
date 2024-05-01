@@ -18,26 +18,29 @@ const Menu:React.FC = () => {
     items-center text-3xl 
     fixed h-20 w-full 
     bottom-0 pl-5 pr-5 
-    pt-2 pb-2 menu z-50 '
+    pt-2 pb-2 menu z-50
+    bg-white
+    '
     
     >
     <Link href={'/Remume'}>
-      <span className='text-white flex justify-center flex-col items-center'><GoHomeFill />
+      <span className='text-black flex justify-center flex-col items-center'><GoHomeFill />
       <label className='text-xl'>Home</label>
        </span></Link>
       
-      <span className='text-white flex justify-center flex-col items-center'>
+      <span className='text-black flex justify-center flex-col items-center'>
         <FaFile />
         <label className='text-xl'>Resume</label>
         </span>
-      <span className='text-white flex justify-center flex-col items-center'>
+      <span className='text-black flex justify-center flex-col items-center'>
         <FaClipboardCheck />
         <label className='text-xl'>Apply</label>
       </span>
-      <span className='text-white flex justify-center flex-col items-center'>
+      <Link href={'/Profile'} ><span className='text-black flex justify-center flex-col items-center'>
         <FaCircleUser />
         <label className='text-xl'>Profile</label>
         </span>
+        </Link>
     </div>
   )
 }

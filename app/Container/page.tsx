@@ -38,17 +38,18 @@ const Cato:React.FC = () => {
         gap-3
          justify-start items-center 
         w-full h-full'>
-        
-        <Link className='w-full' href={"/Search"}> <input placeholder='hello' type='text' className='p-4 ml-4
+
+        <Link className=' w-full flex flex-col items-center justify-center relative' href={"/Search"}> 
+         <button  className='text-xl absolute left-5 z-10
+          flex items-center justify-center p-4 Cato 
+           rounded-full text-white pointer-events-none '><IoSearch /></button>
+        <input placeholder='hello' type='text' className='p-4
            placeholder:text-gray-400
             rounded-2xl text-black input r
-           elative w-11/12 outline-none pl-20' /> </Link>
+           elative w-[95%] outline-none pl-20' /> </Link>
           <span role='button' onClick={() => setPop(!pop1)} className='text-xl p-2 
-          absolute right-10'><TbMenuDeep /></span>
-          <button  className='text-xl 
-          flex items-center justify-center
-           left-10 btn-se p-4 Cato 
-           rounded-full text-white pointer-events-none '><IoSearch /></button>
+          absolute right-[10%]'><TbMenuDeep /></span>
+          
         </div>
         <Popup jj={setPop} up={pop1} />
       </div>
