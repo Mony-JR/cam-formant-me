@@ -4,8 +4,8 @@ import React, { useState } from "react";
 
 
 interface pp{
-  S1:(value:String)=>void
-  S2:String
+  S1:(value:string)=>void
+  S2:string
 }
 
   interface Show{
