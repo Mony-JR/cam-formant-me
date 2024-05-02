@@ -39,7 +39,6 @@ const Search:React.FC<pp>=({S1,S2})=> {
 
   return (
 
-    <>
     <div className="flex flex-col gap-10">
       <div className="flex flex-wrap justify-center items-start gap-3">
       {fil_search.map((p,index)=>(
@@ -48,15 +47,14 @@ const Search:React.FC<pp>=({S1,S2})=> {
       </div>
       <div className=" flex flex-col gap-1 justify-center items-center ">
         {
-          fil_search.map((p)=>(
-            <div className="w-[95%] h-[300px] bg-red-500 ">
+          fil_search.map((p,index)=>(
+            <div key={index} className="w-[95%] h-[300px] bg-red-500 ">
               
             </div>
           ))
         }
       </div>
     </div>
-    </>
   );
 }
 export default Search
