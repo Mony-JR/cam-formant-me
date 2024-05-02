@@ -1,6 +1,6 @@
 
 interface pp{
-  S1:(value:string)=>void
+  S1:string
   S2:string
 }
 
