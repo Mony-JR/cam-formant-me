@@ -1,7 +1,3 @@
-"use client"
-
-import React, { useState } from "react";
-
 
 interface pp{
   S1:(value:string)=>void
@@ -32,7 +28,6 @@ const Search:React.FC<pp>=({S1,S2})=> {
 
   ]
 
-  const [va,setva]=useState<string>('')
 
   const fil_search=se.filter((ss)=>ss.txt.toUpperCase().includes(S1.toUpperCase()))
 
