@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from "react";
-import Link from 'next/link';
 
 
 interface pp{
@@ -43,8 +42,8 @@ const Search:React.FC<pp>=({S1,S2})=> {
     <>
     <div className="flex flex-col gap-10">
       <div className="flex flex-wrap justify-center items-start gap-3">
-      {fil_search.map((p)=>(
-        <span className="p-2 bg-red-300 rounded-xl">{p.txt}</span>
+      {fil_search.map((p,index)=>(
+        <span key={index} className="p-2 bg-red-300 rounded-xl">{p.txt}</span>
       ))}
       </div>
       <div className=" flex flex-col gap-1 justify-center items-center ">

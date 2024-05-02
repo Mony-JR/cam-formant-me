@@ -40,7 +40,7 @@ const Cato:React.FC = () => {
         w-full h-full'>
 
         <Link className=' w-full flex flex-col items-center justify-center relative' href={"/Search"}> 
-         <button  className='text-xl absolute left-5 z-10
+         <button  className='text-xl absolute left-5 desktop:left-10 z-10
           flex items-center justify-center p-4 Cato 
            rounded-full text-white pointer-events-none '><IoSearch /></button>
         <input placeholder='hello' type='text' className='p-4
