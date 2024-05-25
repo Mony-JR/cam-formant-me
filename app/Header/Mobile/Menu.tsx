@@ -14,14 +14,12 @@ const Menu:React.FC = () => {
   
  
   return (
-    <div className='flex sm:flex-col justify-between 
-    items-center text-3xl 
-    fixed h-20 w-full 
-    bottom-0 pl-5 pr-5 
-    pt-2 pb-2 menu z-50
-    bg-white
+    <div
+     className='flex sm:flex-col justify-between items-center text-3xl 
+     fixed h-20 w-full  
+     bottom-0 pl-5 pr-5  
+     pt-2 pb-2 menu z-50 bg-white 
     '
-    
     >
     <Link href={'/home'}>
       <span className='text-black flex justify-center flex-col items-center'><GoHomeFill />
