@@ -46,23 +46,23 @@ const JobMain: React.FC = () => {
         {
             id: 2,
             txt: 'ABA Dev',
-            logo: '',
+            logo: 'https://i.pinimg.com/474x/36/9f/61/369f612149566874dcbc2d8735d51ccb.jpg',
             position: 10,
             time: { part: "part time", full: "full time" },
             salary: { min: 500, max: 1000 },
             date: '2023-05-25',
-            location: 'Khan Camkarmon',
+            location: 'Phnom penh',
             like: false
         },
         {
             id: 3,
             txt: 'Flutter Developer',
-            logo: '',
+            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD6cqji5FGvPQsj3PR21AjZFIQzq_eAUIFyzfAGqkmww&s',
             position: 10,
             time: { part: "part time", full: "full time" },
             salary: { min: 500, max: 1000 },
             date: '2023-05-25',
-            location: 'Khan Camkarmon',
+            location: 'Pnhom penh',
             like: false
         },
     ]);
@@ -89,7 +89,11 @@ const JobMain: React.FC = () => {
                         <div className='ipse:w-[350px] ip14:w-[400px] h-[250px] flex justify-between flex-col items-center bg-white drop-shadow-lg rounded-2xl pt-3'>
 
                             <div className='flex justify-between w-11/12 items-center'>
-                                <h1>{p.txt}</h1>
+                                <div className='flex gap-5 items-center'>
+                                <Image src={p.logo} width={50} height={50} alt='logo' />
+                                <h1>{p.txt}</h1>                                    
+                                </div>
+
                                 <span onClick={() => handleHeartClick(p.id)} className='text-2xl z'>{p.like ? <IoMdHeart /> : <CiHeart />}</span>
                             </div>
                          <Link className='ipse:w-[350px] ip14:w-[400px] h-[250px] flex justify-between flex-col items-center pt-3' href={`${p.date}/${p.txt}`}>    
@@ -133,11 +137,12 @@ const JobMain: React.FC = () => {
                 <span className='pl-1 pr-2 bg-orange-500 rounded-full'></span>
                 <span className='pl-1 pr-2 bg-orange-500 rounded-full'></span>
             </div>
-            <button className='p-3 text-white text-xl bg-orange-500 w-[90%] flex justify-center items-center gap-2 rounded-3xl'>
+            <Link className='w-full flex items-center justify-center' href={"/login"}>
+                <button className='p-3 text-white text-xl bg-orange-500 w-[90%] flex justify-center items-center gap-2 rounded-3xl'>
                 Find Your Matching
                 <span className='text-4xl text-white'><GrFormNextLink /></span>
             </button>
-            
+            </Link>
         </div>
     )
 }

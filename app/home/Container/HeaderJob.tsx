@@ -46,7 +46,7 @@ const HeaderJob:React.FC = () => {
             rounded-2xl text-black input r
            elative w-[95%] outline-none pl-20' /> </Link>
           <span role='button' onClick={() => setPop(!pop1)} className='text-xl p-2 
-          absolute right-[10%]'><TbMenuDeep /></span>
+          absolute right-[10%] '><TbMenuDeep /></span>
           
         </div>
         <Popup setUp={setPop} up={pop1} />
