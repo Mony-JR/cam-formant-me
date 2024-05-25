@@ -21,7 +21,7 @@ const Register = () => {
         <input className='p-4 pl-6 outline-none shadow-lg w-10/12 rounded-xl ' type="text" placeholder='Password' />
 
         <div className='flex gap-2'>
-        <p>Have an account already? </p>  
+        <h3>Have an account already? </h3>  
         <Link href={"/login"} className=' text-orange-500 '> Sign in</Link>         
         </div>
 

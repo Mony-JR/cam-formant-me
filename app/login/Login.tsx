@@ -14,9 +14,9 @@ const Login = () => {
           <input className='p-4 pl-6 outline-none shadow-lg w-10/12 rounded-xl ' type="text" placeholder='Verify Code' />
           <button className='Cato p-5 w-[120px] absolute right-5 bottom-0 rounded-[20px] text-white  '>Get</button>
         </div>
-        <div className='flex gap-2'>
-        <p>Don't have an account? </p>  
-        <Link href={"/login/register"} className=' text-orange-500 '> Register</Link>         
+        <div className='flex gap-2 '>
+          <h3>{`Don't have an account?`} </h3>
+          <Link href={"/login/register"} className=' text-orange-500 '>Register </Link>
         </div>
 
 
