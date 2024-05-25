@@ -1,4 +1,4 @@
-import Cato from './Container/page'
+import Cato from './home/Container/Container'
 
 const page= () => {
 

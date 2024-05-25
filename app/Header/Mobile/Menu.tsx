@@ -23,7 +23,7 @@ const Menu:React.FC = () => {
     '
     
     >
-    <Link href={'/Remume'}>
+    <Link href={'/home'}>
       <span className='text-black flex justify-center flex-col items-center'><GoHomeFill />
       <label className='text-xl'>Home</label>
        </span></Link>

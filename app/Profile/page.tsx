@@ -1,30 +1,20 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
-
-const page = () => {
-
-
+const Page = () => {
   return (
-    <div className='h-[100vh] w-full
-    flex flex-col'>
-      <div className=' w-full h-[20%] Cato '>
-        
+    <div className='h-screen w-full flex flex-col'>
+      <div className='w-full h-1/5 bg-gray-500'>
+        {/* Content for the top section */}
       </div>
-      <div className=' absolute
-       bottom-8 rounded-[40px] 
-       w-full h-[80%] bg-white '>
-        <div className='w-[50px] h-[50px] '>
-          <Image 
-          src="https://cdn-icons-png.flaticon.com/512/2919/2919906.png"
-          width={500}
-          height={400}
-          alt='hh'
-          />
+      <div className='relative flex-grow bg-white'>
+        {/* Content for the bottom section */}
+        <div className='w-1/4 mx-auto mt-8'>
+          
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

@@ -4,7 +4,7 @@ import { IoSearch } from "react-icons/io5";
 import { TbMenuDeep } from "react-icons/tb";
 import { IoMdArrowBack } from "react-icons/io";
 import Link from 'next/link';
-import Popup from '../Container/Popup';
+import Popup from '../home/Container/Popup';
 import SearchComponent from './Search'; // Renamed the component to SearchComponent
 
 const Searching = () => {
@@ -39,7 +39,7 @@ const Searching = () => {
             rounded-full text-white pointer-events-none '><IoSearch /></button>
         </div>
 
-        <Popup jj={setPop} up={pop1} />
+        <Popup setUp={setPop} up={pop1} />
       </div>
       <SearchComponent S1={s1} />
     </>
