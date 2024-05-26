@@ -1,34 +1,15 @@
 'use client'
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { CiHeart } from "react-icons/ci";
-import { IoMdHeart } from "react-icons/io";
-import { FaBusinessTime } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
 import { GrFormNextLink } from "react-icons/gr";
-import Image from 'next/image';
+import Data2 from '@/TypeofData/TypeofData';
+import Card from './Card';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-interface Data2 {
-    id: number
-    txt: string
-    logo: string
-    position: number
-    time: JobTime
-    salary: Salary
-    date: string
-    location: string
-    like: boolean
-}
-
-interface JobTime {
-    part: string
-    full: string
-}
-
-interface Salary {
-    min: number
-    max: number
-}
 
 const JobMain: React.FC = () => {
     const [data, setData] = useState<Data2[]>([
@@ -82,61 +63,43 @@ const JobMain: React.FC = () => {
                 <h3>Recommend</h3>
                 <Link href="/Search"><span className='text-orange-400'>Searching more</span></Link>
             </div>
-            <main className='flex flex-row gap-10 ip14:pl-7 ipse:pl-3 pr-5 justify-start w-full h-[300px] overflow-y-auto scroll-main'>
-                {data.map((p) => (
-                    <section key={p.id} className='w-[400px] flex justify-between flex-col items-center'>
-                       
-                        <div className='ipse:w-[350px] ip14:w-[400px] h-[250px] flex justify-between flex-col items-center bg-white drop-shadow-lg rounded-2xl pt-3'>
+            <main className='w-full h-[300px]'>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          pagination={{
+            clickable: true,
+          }}
+          
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          modules={[Pagination, Navigation]}
+          className='mySwiper '
+        >
+          {data.map(p => (
+            <SwiperSlide key={p.id}>
+                <div className='flex justify-center items-center pb-10 '>
+              <Card
+                id={p.id}
+                txt={p.txt}
+                logo={p.logo}
+                position={p.position}
+                time={p.time}
+                salary={p.salary}
+                date={p.date}
+                location={p.location}
+                like={p.like}
+                handleHeartClick={handleHeartClick}
+              />                    
+                </div>
 
-                            <div className='flex justify-between w-11/12 items-center'>
-                                <div className='flex gap-5 items-center'>
-                                <Image src={p.logo} width={50} height={50} alt='logo' />
-                                <h1>{p.txt}</h1>                                    
-                                </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </main>
 
-                                <span onClick={() => handleHeartClick(p.id)} className='text-2xl z'>{p.like ? <IoMdHeart /> : <CiHeart />}</span>
-                            </div>
-                         <Link className='ipse:w-[350px] ip14:w-[400px] h-[250px] flex justify-between flex-col items-center pt-3' href={`${p.date}/${p.txt}`}>    
-                            <div className='flex justify-between w-11/12 items-center'>
-                                <div className='flex flex-col gap-7 w-full justify-between'>
-                                    <div className='flex gap-8 w-full justify-start'>
-                                        <span className='text-orange-500'>Remote</span>
-                                        <span className='text-orange-500'>{p.time.full}</span>
-                                        <span className='text-orange-500'>{p.time.part}</span>
-                                    </div>
-                                    <div className='flex gap-3'>
-                                        <button className='bg-orange-200 p-1 rounded-xl w-5/12 text-orange-500'>Communication</button>
-                                        <button className='bg-orange-200 p-1 rounded-xl w-5/12 text-orange-500'>Language</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='flex w-full flex-col justify-between gap-5 items-center'>
-                                <div className='flex justify-between w-10/12'>
-                                    <span className='text-slate-400'>Position {p.position}</span>
-                                    <h1 className='text-orange-500'>{p.salary.min}$ - {p.salary.max}$</h1>
-                                </div>
-                                <div className='flex justify-between w-10/12 mb-4'>
-                                    <label className='flex items-center gap-3'>
-                                        <FaBusinessTime />
-                                        <span>{p.date}</span>
-                                    </label>
-                                    <label className='flex items-center gap-3'>
-                                        <FaLocationDot />
-                                        <span>{p.location}</span>
-                                    </label>
-                                </div>
-                            </div>
-                            </Link>
-                        </div>
-                        
-                    </section>
-                ))}
-            </main>
-            <div className='w-full h-3 flex justify-center gap-3'>
-                <span className='pl-1 pr-2 bg-orange-500 rounded-full'></span>
-                <span className='pl-1 pr-2 bg-orange-500 rounded-full'></span>
-                <span className='pl-1 pr-2 bg-orange-500 rounded-full'></span>
-            </div>
             <Link className='w-full flex items-center justify-center' href={"/login"}>
                 <button className='p-3 text-white text-xl bg-orange-500 w-[90%] flex justify-center items-center gap-2 rounded-3xl'>
                 Find Your Matching

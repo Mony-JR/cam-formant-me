@@ -14,6 +14,9 @@ const Cato:React.FC = () => {
         <HeaderJob />
       </div>
       <JobMain />
+      <div>
+        
+      </div>
     </div>
   );
 }
