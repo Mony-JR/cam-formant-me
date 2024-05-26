@@ -7,6 +7,12 @@ import { CiHeart } from 'react-icons/ci';
 import Data2 from '@/TypeofData/TypeofData';
 
 const Card:React.FC<Data2> = ({id,txt,logo,location,like,time,position,salary,date,handleHeartClick}:Data2) => {
+    const onHeartClick = () => {
+        if (handleHeartClick) {
+          handleHeartClick(id);
+        }
+      };
+    
   return (
       <section key={id} className='w-[400px] flex justify-between flex-col items-center'>
                        
@@ -18,7 +24,7 @@ const Card:React.FC<Data2> = ({id,txt,logo,location,like,time,position,salary,da
                                <h1>{txt}</h1>                                    
                                </div>
 
-                               <span onClick={() => handleHeartClick(id)} className='text-2xl z'>{like ? <IoMdHeart /> : <CiHeart />}</span>
+                               <span onClick={onHeartClick} className='text-2xl z'>{like ? <IoMdHeart /> : <CiHeart />}</span>
                            </div>
                         <Link className='ipse:w-[350px] ip14:w-[400px] h-[250px] flex justify-between flex-col items-center pt-3' href={`${date}/${txt}`}>    
                            <div className='flex justify-between w-11/12 items-center'>
