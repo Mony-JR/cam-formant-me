@@ -74,7 +74,7 @@ const MoreCard = () => {
       <Position/>
       <div className='flex pt-10 pb-10 flex-col gap-5 '>
         {data.map((p)=>(
-          <Card id={p.id} txt={p.txt} 
+          <Card key={p.id} id={p.id} txt={p.txt} 
           logo={p.logo} 
           position={p.position} 
           time={p.time} 
