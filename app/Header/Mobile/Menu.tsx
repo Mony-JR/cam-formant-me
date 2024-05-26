@@ -18,8 +18,7 @@ const Menu:React.FC = () => {
      className='flex sm:flex-col justify-between items-center text-3xl 
      fixed h-20 w-full  
      bottom-0 pl-5 pr-5  
-     pt-2 pb-2 menu z-10 bg-white '
-    >
+     pt-2 pb-2 menu z-10 bg-white  '>
     <Link href={'/home'}>
       <span className='text-black flex justify-center flex-col items-center'><GoHomeFill />
       <label className='text-xl'>Home</label>
