@@ -16,7 +16,7 @@ const Card: React.FC<Data2> = ({ id, txt, logo, location, like, time, position, 
     return (
         <section key={id} className='w-[400px] flex justify-between flex-col pl-5 items-center ipse:pl-3 ip14:pl-0 '>
 
-            <div className='ipse:w-[350px] ip14:w-[400px] h-[250px] w-[350px] flex justify-between flex-col items-center bg-white drop-shadow-lg rounded-2xl pt-3'>
+            <div className='ipse:w-[350px] ip14:w-[400px] h-[260px] w-[350px] flex justify-between flex-col items-center bg-white drop-shadow-lg rounded-2xl pt-3'>
 
                 <div className='flex justify-between w-11/12 items-center'>
                     <div className='flex gap-5 items-center'>
@@ -40,7 +40,7 @@ const Card: React.FC<Data2> = ({ id, txt, logo, location, like, time, position, 
                             </div>
                         </div>
                     </div>
-                    <div className='flex w-full flex-col justify-between gap-5 items-center'>
+                    <div className='flex w-full flex-col ip14:mb-5 ipse:mb-10 justify-between gap-5 items-center'>
                         <div className='flex justify-between w-10/12'>
                             <span className='text-slate-400'>Position {position}</span>
                             <h1 className='text-orange-500'>{salary.min}$ - {salary.max}$</h1>
