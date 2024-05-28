@@ -11,3 +11,11 @@ const BackButton = () => {
 }
 
 export default BackButton
+
+export const BackButton_md = () => {
+  return (
+    <div className='w-full h-10 '>
+      <span className='text-2xl '><IoArrowBack /></span>
+    </div>
+  )
+}

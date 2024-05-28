@@ -6,6 +6,7 @@ import { IoMdArrowBack } from "react-icons/io";
 import Link from 'next/link';
 import Popup from '../home/Container/Popup';
 import SearchComponent from './Search'; // Renamed the component to SearchComponent
+import { BackButton_md} from '@/Back/BackButton';
 
 const Searching = () => {
 
@@ -16,7 +17,7 @@ const Searching = () => {
     <>
       <div className='flex justify-center items-center h-[100px]'>
         <div>
-          <Link href={"/"}><span className='text-3xl'><IoMdArrowBack /></span></Link>
+          <Link href={"/"}><BackButton_md/></Link>
         </div>
         <div className='flex
           gap-3

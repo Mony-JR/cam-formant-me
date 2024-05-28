@@ -26,7 +26,7 @@ const Card: React.FC<Data2> = ({ id, txt, logo, location, like, time, position, 
 
                     <span onClick={onHeartClick} className='text-2xl z'>{like ? <IoMdHeart /> : <CiHeart />}</span>
                 </div>
-                <Link className='ipse:w-[350px] ip14:w-[400px] h-[250px] w-[100%] flex justify-between flex-col items-center pt-3' href={`${date}/${txt}`}>
+                <Link className='ipse:w-[350px] ip14:w-[400px] h-[250px] w-[100%] flex justify-between flex-col items-center pt-3' href={`${date}/${id}`}>
                     <div className='flex justify-between w-11/12 items-center'>
                         <div className='flex flex-col gap-7 w-full justify-between'>
                             <div className='flex gap-8 w-full justify-start'>

@@ -6,11 +6,13 @@ import { FaCircleUser } from "react-icons/fa6";
 import { FaClipboardCheck } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
 import Link from 'next/link';
-import { LuChevronsUpDown } from "react-icons/lu";
+import { GrUp } from "react-icons/gr";
+import { usePathname } from 'next/navigation';
 
 const Menu: React.FC = () => {
   const [show, setShow] = useState<boolean>(true);
   const [hover, setHover] = useState<boolean>(false);
+  const pathname = usePathname();
 
   const handleShow = () => {
     setShow(!show);
@@ -20,7 +22,7 @@ const Menu: React.FC = () => {
     if (!hover) {
       const timer = setTimeout(() => {
         setShow(true);
-      }, 6000);
+      }, 5000);
 
       return () => clearTimeout(timer);
     }
@@ -28,8 +30,8 @@ const Menu: React.FC = () => {
 
   return (
     <div className='fixed bottom-0 z-10 w-full h-20'>
-      <span onClick={handleShow} className={` ${show ? 'block' : 'hidden'} z-10 absolute text-4xl top-[-35%] right-0`}>
-        <LuChevronsUpDown />
+      <span onClick={handleShow} className={` ${show ? 'block' : 'hidden'} z-10 absolute text-3xl top-10 right-3`}>
+        <GrUp />
       </span>
       <div 
         onMouseEnter={() => setHover(true)}
@@ -40,7 +42,8 @@ const Menu: React.FC = () => {
         pt-2 pb-2 menu z-10 bg-white ${show ? 'hidden' : 'flex'} `}
       >
         <Link href={'/home'}>
-          <span className='text-black flex justify-center flex-col items-center'><GoHomeFill />
+          <span className={`text-black flex justify-center flex-col items-center ${(pathname === '/home' || pathname === '/Search') ? 'text-orange-500' : ''}`}>
+            <GoHomeFill />
             <label className='text-xl'>Home</label>
           </span>
         </Link>
@@ -54,7 +57,7 @@ const Menu: React.FC = () => {
           <label className='text-xl'>Apply</label>
         </span>
         <Link href={'/Profile'}>
-          <span className='text-black flex justify-center flex-col items-center'>
+          <span className={`text-black flex justify-center flex-col items-center ${pathname === '/Profile' ? 'text-orange-500' : ''}`}>
             <FaCircleUser />
             <label className='text-xl'>Profile</label>
           </span>

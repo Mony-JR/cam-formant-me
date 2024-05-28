@@ -10,8 +10,8 @@ import Connect from './Connect'
 const Register = () => {
   return (
     <div className='flex flex-col gap-5 '>
-      <div className='w-full pl-6 h-[100px] flex justify-center items-center '>
-        <BackButton/>
+      <div >
+        <Link className='w-full pl-6 h-[100px] flex justify-center items-center ' href={"../"}><BackButton/></Link>
       </div>
       <div className='flex w-full h-full flex-col mt-5 justify-center items-center gap-5 '>
         <h1 className='text-xl mb-10 '>Register Account</h1>
