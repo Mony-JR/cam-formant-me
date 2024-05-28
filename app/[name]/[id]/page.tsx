@@ -87,7 +87,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
         <div>
             <h1>Hello {params.id}</h1>
             {getData.map((p)=>(
-                <div>
+                <div key={p.id}>
                     <h1>Hello Filter {p.id}</h1>
                 </div>
             ))}
