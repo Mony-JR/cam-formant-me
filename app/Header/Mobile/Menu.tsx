@@ -57,7 +57,7 @@ const Menu: React.FC = () => {
           <label className='text-xl'>Apply</label>
         </span>
         <Link href={'/myprofile'}>
-          <span className={`text-black flex justify-center flex-col items-center ${pathname === '/profile' ? 'text-orange-500' : ''}`}>
+          <span className={`text-black flex justify-center flex-col items-center ${pathname === '/myprofile' ? 'text-orange-500' : ''}`}>
             <FaCircleUser />
             <label className='text-xl'>Profile</label>
           </span>
