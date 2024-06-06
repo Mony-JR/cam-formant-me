@@ -1,4 +1,4 @@
-import { Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
@@ -18,11 +18,11 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-          'backg':"linear-gradient(to right, #FF5858, #F09819)",
+          'mybg-linear': 'linear-gradient(to right, #FF5858, #F09819)',
       },
+      
     },
   },
-  
   plugins: [],
 };
 export default config;
