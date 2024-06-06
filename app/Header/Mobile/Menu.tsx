@@ -56,7 +56,7 @@ const Menu: React.FC = () => {
           <FaClipboardCheck />
           <label className='text-xl'>Apply</label>
         </span>
-        <Link href={'/profile'}>
+        <Link href={'/myprofile'}>
           <span className={`text-black flex justify-center flex-col items-center ${pathname === '/profile' ? 'text-orange-500' : ''}`}>
             <FaCircleUser />
             <label className='text-xl'>Profile</label>
